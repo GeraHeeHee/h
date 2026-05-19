@@ -1,8 +1,8 @@
 extends RigidBody3D
 @onready var spring_arm_3d: SpringArm3D = $SpringArm3D
-var speed = 0.01
+var speed = 0.2
 var mouse = 0.01
-@export var camera_y_offset: float = 1
+@export var camera_y_offset: float = 2
 
 func _input(event: InputEvent):
 	if event is InputEventMouseMotion:
@@ -29,3 +29,7 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 	inputDirection = inputDirection.rotated(Vector3.UP, spring_arm_3d.rotation.y).normalized() * speed
 	
 	apply_central_impulse(Vector3(inputDirection.x, 0, inputDirection.z))
+
+
+func _on_coin_body_entered(body: Node3D) -> void:
+	pass # Replace with function body.
