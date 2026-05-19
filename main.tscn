@@ -27,19 +27,19 @@ transform = Transform3D(1, 0, 0, 0, -0.9251434, 0.37961772, 0, -0.37961772, -0.9
 [node name="Node" type="Node" parent="."]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Node"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.028625488, -0.3569336, -4.758301)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.028625488, -0.3569336, -11.264893)
 use_collision = true
-size = Vector3(8.310913, 0.2861328, 10.516602)
+size = Vector3(8.310913, 0.2861328, 23.529785)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Node"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8470764, 0.0057373047, -4.758301)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8470764, 0.0057373047, -11.300537)
 use_collision = true
-size = Vector3(0.67401123, 1.0114746, 10.516602)
+size = Vector3(0.67401123, 1.0114746, 23.601074)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Node"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7871685, 0.0057373047, -4.758301)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7871685, 0.0057373047, -11.293701)
 use_collision = true
-size = Vector3(0.67401123, 1.0114746, 10.516602)
+size = Vector3(0.67401123, 1.0114746, 23.587402)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Node"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021019936, 0.0057373047, 0.2119751)
@@ -47,18 +47,26 @@ use_collision = true
 size = Vector3(8.293564, 1.0114746, 0.5760498)
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="Node"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021019936, 0.0057373047, -9.901386)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021019936, 0.0057373047, -22.807688)
 use_collision = true
 size = Vector3(8.293564, 1.0114746, 0.5760498)
 
 [node name="RigidBody3D" parent="." instance=ExtResource("1_0xm2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3672187, -5.509409)
-collision_layer = 2
-collision_mask = 5
 
-[node name="coin" parent="." instance=ExtResource("2_0xm2m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5632665, -2.1494136)
-collision_layer = 4
-collision_mask = 2
+[node name="coins" type="Node" parent="."]
 
-[connection signal="body_entered" from="coin" to="coin" method="_on_body_entered"]
+[node name="coin" parent="coins" instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7970619, -2.7332513)
+
+[node name="coin2" parent="coins" instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9019518, 0.7970619, -12.021831)
+
+[node name="coin3" parent="coins" instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6216111, 0.7970619, -7.974964)
+
+[node name="coin4" parent="coins" instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0058064, 0.7970619, -16.15999)
+
+[node name="coin5" parent="coins" instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3259778, 0.7970619, -20.293964)

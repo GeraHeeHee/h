@@ -15,9 +15,14 @@ run/main_scene="uid://h2s6a4r83471"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameManager="*res://game_manager.tscn"
+
 [global_group]
 
 Players=""
+Coleccionables=""
 
 [input]
 

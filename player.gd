@@ -13,6 +13,7 @@ func _input(event: InputEvent):
 
 func _ready() -> void:
 	spring_arm_3d.top_level = true
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _process(delta: float) -> void:
 	var target_position = self.global_position
