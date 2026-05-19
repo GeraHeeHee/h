@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://w86dc1dmkbk8"]
+[gd_scene load_steps=5 format=3 uid="uid://w86dc1dmkbk8"]
+
+[ext_resource type="Script" uid="uid://dtbe48tjqo8pd" path="res://player.gd" id="1_4flbx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2yge"]
 albedo_color = Color(1, 0, 1, 1)
@@ -9,6 +11,7 @@ material = SubResource("StandardMaterial3D_h2yge")
 [sub_resource type="SphereShape3D" id="SphereShape3D_lquwl"]
 
 [node name="RigidBody3D" type="RigidBody3D"]
+script = ExtResource("1_4flbx")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("SphereMesh_1bvp3")
