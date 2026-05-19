@@ -52,6 +52,3 @@ size = Vector3(8.293564, 1.0114746, 0.5760498)
 
 [node name="RigidBody3D" parent="." instance=ExtResource("1_0xm2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3672187, -5.509409)
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.37204835, 0.92821336, 0, -0.92821336, 0.37204835, 0, 5.636385, -1.2406194)
