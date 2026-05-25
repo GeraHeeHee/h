@@ -17,4 +17,6 @@ func _on_body_entered(body: Node3D) -> void:
 		print("Colisión por clase")
 	print("Colisión por layer")
 	emit_signal("coinCollected")
+	GameManager.addPoint()
+	print(GameManager.getPoint())
 	queue_free()
