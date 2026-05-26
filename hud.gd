@@ -1,8 +1,8 @@
 extends Node
-@onready var score: Label = $Control/MarginContainer/score
+@onready var label: Label = $Control/MarginContainer/label
 
 func _ready() -> void:
 	pass
 
 func _process(delta: float) -> void:
-	score.text = "Score: " + str(GameManager.getPoint())
+	label.text = "Score: " + str(GameManager.getPoint())
